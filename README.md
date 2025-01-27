@@ -45,7 +45,7 @@ InventoryApplication.java.
       - If an item has quantity 0 it will be automatically deleted from the database.
   * Production Date - A none-null date of the format DD.MM.YYYY,
   * Expiry Date - Same as production date,
-  * Minimum Temperature - A float within the range [-99,999],
+  * Minimum Temperature - A float within the range [-99,99],
   * Maximum Temperature - Same as minimum temperature,
   * Price - A float within the range (0,9999].
 
