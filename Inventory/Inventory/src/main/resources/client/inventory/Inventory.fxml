@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="723.0" prefWidth="1051.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.inventory.ClientController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="703.0" prefWidth="1051.0" spacing="10.0">
+         <children>
+            <TableView fx:id="tableView" prefHeight="418.0" prefWidth="1028.0" VBox.vgrow="ALWAYS">
+               <columns>
+                  <TableColumn fx:id="productColumn" prefWidth="93.0" text="Product" />
+                  <TableColumn fx:id="catalogueColumn" prefWidth="124.0" text="Catalogue" />
+                  <TableColumn fx:id="quantityColumn" prefWidth="110.0" text="Quantity" />
+                  <TableColumn fx:id="prodDateColumn" prefWidth="116.0" text="Prod Date" />
+                  <TableColumn fx:id="exDateColumn" prefWidth="124.0" text="Ex Date" />
+                  <TableColumn fx:id="minTempColumn" prefWidth="177.0" text="Min Temperature" />
+                  <TableColumn fx:id="maxTempColumn" prefWidth="179.0" text="Max Temperature" />
+                  <TableColumn fx:id="priceColumn" prefWidth="119.0" text="Price" />
+               </columns>
+            </TableView>
+            <Label fx:id="message" prefHeight="16.0" prefWidth="273.0" />
+            <HBox alignment="CENTER" spacing="10.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <TextField fx:id="searchField" prefHeight="24.0" prefWidth="459.0" />
+                  <Button mnemonicParsing="false" onAction="#onSearchPressed" text="Search">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#onPrintAllPressed" text="Print All">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <Line endX="100.0" startX="-711.3677978515625" startY="0.7928932309150696" />
+            <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox prefHeight="105.0" prefWidth="691.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="51.0" prefWidth="1011.0" spacing="15.0">
+                           <children>
+                              <Label text="Product" />
+                              <TextField fx:id="productField" prefHeight="24.0" prefWidth="62.0" />
+                              <Label text="Prod Date" />
+                              <TextField fx:id="prodDateField" prefHeight="24.0" prefWidth="62.0" />
+                              <Label text="Min Temp" />
+                              <TextField fx:id="minTempField" prefHeight="24.0" prefWidth="62.0" />
+                              <Label text="Price" />
+                              <TextField fx:id="priceField" prefHeight="24.0" prefWidth="62.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="54.0" prefWidth="1011.0" spacing="10.0">
+                           <children>
+                              <Label text="Catalogue" />
+                              <TextField fx:id="catalogueField" prefHeight="24.0" prefWidth="62.0" />
+                              <Label text="Ex Date" />
+                              <TextField fx:id="exDateField" prefHeight="24.0" prefWidth="62.0" />
+                              <Label text="Max Temp" />
+                              <TextField fx:id="maxTempField" prefHeight="24.0" prefWidth="62.0" />
+                              <Label text="Quantity" />
+                              <TextField fx:id="quantityField" prefHeight="24.0" prefWidth="62.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Button mnemonicParsing="false" onAction="#onAddPressed" text="Add">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+            <Line endX="100.0" startX="-711.3677978515625" startY="0.7928932309150696" />
+            <HBox alignment="CENTER" spacing="10.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label text="Product / Catalogue" />
+                  <TextField fx:id="updateProduct" />
+                  <Label fx:id="updateField" text="Quantity" />
+                  <TextField fx:id="newValueField" />
+                  <Button mnemonicParsing="false" onAction="#onUpdatePressed" text="Update">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <MenuButton fx:id="updateOptions" mnemonicParsing="false" text="Quantity">
+                     <items>
+                        <MenuItem id="production_date" fx:id="prodDateOption" mnemonicParsing="false" text="Prod Date" />
+                        <MenuItem id="quantity" fx:id="quantityOption" mnemonicParsing="false" text="Quantity" />
+                        <MenuItem id="expiry_date" fx:id="exDateOption" mnemonicParsing="false" text="Ex Date" />
+                        <MenuItem id="price" fx:id="priceOption" mnemonicParsing="false" text="Price" />
+                     </items>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </MenuButton>
+               </children>
+            </HBox>
+            <Line endX="100.0" startX="-711.3677978515625" startY="0.7928932309150696" />
+            <HBox alignment="CENTER" spacing="20.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label prefHeight="16.0" prefWidth="133.0" text="Product / Catalogue" />
+                  <TextField fx:id="deleteProduct" prefHeight="24.0" prefWidth="178.0" />
+                  <Button mnemonicParsing="false" onAction="#onDeletePressed" text="Delete" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</Pane>
