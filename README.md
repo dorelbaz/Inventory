@@ -2,7 +2,7 @@
 
 ## Project description
 
-This system contains a server and a client. The client has a graphical interface of a food item database at his disposal and the server queries said database according to the client's requests. The communication is bi-directional and secured, utilizing RSA encryption.
+This system contains a server and a client. The client has a graphical interface of a food item database at his disposal and the server queries said database according to the client's requests. The communication is bi-directional and secured, utilizing RSA encryption. Measures to prevent SQL injection have been implemented.
 
 ``The Client`` has a graphical interface, made using *JavaFX*, where on successful connection with the server, one could monitor an 
 existing database of food items, create a database of said items and operate on it. 
